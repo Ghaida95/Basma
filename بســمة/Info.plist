@@ -35,5 +35,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>www.Brushez.com-Boahmed Alhour.ttf</string>
+	</array>
 </dict>
 </plist>

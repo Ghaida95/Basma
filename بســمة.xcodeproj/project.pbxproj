@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		774A87A51EA15CB10030A6FA /* ParentControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A87A41EA15CB10030A6FA /* ParentControlPanel.swift */; };
+		774A87A91EA17DED0030A6FA /* EditAddChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A87A81EA17DED0030A6FA /* EditAddChild.swift */; };
+		77528E9B1E7BBF5E0045ECE0 /* www.Brushez.com-Boahmed Alhour.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77528E9A1E7BBF5E0045ECE0 /* www.Brushez.com-Boahmed Alhour.ttf */; };
+		77528E9F1E7BC8170045ECE0 /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77528E9E1E7BC8170045ECE0 /* BounceButton.swift */; };
+		77A280E11EA2CE580087FA22 /* CheckPassCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A280E01EA2CE580087FA22 /* CheckPassCode.swift */; };
 		77F461A01E7AD4BF00431B4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4619F1E7AD4BF00431B4A /* AppDelegate.swift */; };
 		77F461A21E7AD4BF00431B4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F461A11E7AD4BF00431B4A /* ViewController.swift */; };
 		77F461A51E7AD4BF00431B4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F461A31E7AD4BF00431B4A /* Main.storyboard */; };
@@ -14,6 +19,7 @@
 		77F461AA1E7AD4C000431B4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F461A81E7AD4C000431B4A /* LaunchScreen.storyboard */; };
 		77F461B51E7AD4C000431B4A /* ______Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F461B41E7AD4C000431B4A /* ______Tests.swift */; };
 		77F461C01E7AD4C000431B4A /* ______UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F461BF1E7AD4C000431B4A /* ______UITests.swift */; };
+		D2ABA0661EB93112007C3465 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ABA0651EB93112007C3465 /* LineChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		774A87A41EA15CB10030A6FA /* ParentControlPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParentControlPanel.swift; path = ../ParentControlPanel.swift; sourceTree = "<group>"; };
+		774A87A81EA17DED0030A6FA /* EditAddChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAddChild.swift; sourceTree = "<group>"; };
+		77528E9A1E7BBF5E0045ECE0 /* www.Brushez.com-Boahmed Alhour.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "www.Brushez.com-Boahmed Alhour.ttf"; path = "../../../Downloads/Brushez.com-40242-Boahmed Alhour/www.Brushez.com-Boahmed Alhour.ttf"; sourceTree = "<group>"; };
+		77528E9E1E7BC8170045ECE0 /* BounceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
+		77A280E01EA2CE580087FA22 /* CheckPassCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckPassCode.swift; sourceTree = "<group>"; };
 		77F4619C1E7AD4BF00431B4A /* بســمة.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "بســمة.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F4619F1E7AD4BF00431B4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77F461A11E7AD4BF00431B4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +58,7 @@
 		77F461BB1E7AD4C000431B4A /* بســمةUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "بســمةUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F461BF1E7AD4C000431B4A /* ______UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "______UITests.swift"; sourceTree = "<group>"; };
 		77F461C11E7AD4C000431B4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2ABA0651EB93112007C3465 /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +86,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77528E9D1E7BC7B70045ECE0 /* customButton */ = {
+			isa = PBXGroup;
+			children = (
+				77528E9E1E7BC8170045ECE0 /* BounceButton.swift */,
+			);
+			name = customButton;
+			path = "بســمة";
+			sourceTree = "<group>";
+		};
 		77F461931E7AD4BF00431B4A = {
 			isa = PBXGroup;
 			children = (
 				77F4619E1E7AD4BF00431B4A /* بســمة */,
+				77528E9D1E7BC7B70045ECE0 /* customButton */,
 				77F461B31E7AD4C000431B4A /* بســمةTests */,
 				77F461BE1E7AD4C000431B4A /* بســمةUITests */,
 				77F4619D1E7AD4BF00431B4A /* Products */,
@@ -97,9 +119,14 @@
 		77F4619E1E7AD4BF00431B4A /* بســمة */ = {
 			isa = PBXGroup;
 			children = (
+				D2ABA0651EB93112007C3465 /* LineChart.swift */,
 				77F4619F1E7AD4BF00431B4A /* AppDelegate.swift */,
 				77F461A11E7AD4BF00431B4A /* ViewController.swift */,
+				774A87A41EA15CB10030A6FA /* ParentControlPanel.swift */,
+				774A87A81EA17DED0030A6FA /* EditAddChild.swift */,
+				77A280E01EA2CE580087FA22 /* CheckPassCode.swift */,
 				77F461A31E7AD4BF00431B4A /* Main.storyboard */,
+				77528E9A1E7BBF5E0045ECE0 /* www.Brushez.com-Boahmed Alhour.ttf */,
 				77F461A61E7AD4C000431B4A /* Assets.xcassets */,
 				77F461A81E7AD4C000431B4A /* LaunchScreen.storyboard */,
 				77F461AB1E7AD4C000431B4A /* Info.plist */,
@@ -236,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77F461AA1E7AD4C000431B4A /* LaunchScreen.storyboard in Resources */,
+				77528E9B1E7BBF5E0045ECE0 /* www.Brushez.com-Boahmed Alhour.ttf in Resources */,
 				77F461A71E7AD4C000431B4A /* Assets.xcassets in Resources */,
 				77F461A51E7AD4BF00431B4A /* Main.storyboard in Resources */,
 			);
@@ -262,8 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77A280E11EA2CE580087FA22 /* CheckPassCode.swift in Sources */,
 				77F461A21E7AD4BF00431B4A /* ViewController.swift in Sources */,
 				77F461A01E7AD4BF00431B4A /* AppDelegate.swift in Sources */,
+				774A87A51EA15CB10030A6FA /* ParentControlPanel.swift in Sources */,
+				D2ABA0661EB93112007C3465 /* LineChart.swift in Sources */,
+				774A87A91EA17DED0030A6FA /* EditAddChild.swift in Sources */,
+				77528E9F1E7BC8170045ECE0 /* BounceButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +547,7 @@
 				77F461C61E7AD4C000431B4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77F461C71E7AD4C000431B4A /* Build configuration list for PBXNativeTarget "بســمةTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +556,7 @@
 				77F461C91E7AD4C000431B4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77F461CA1E7AD4C000431B4A /* Build configuration list for PBXNativeTarget "بســمةUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +565,7 @@
 				77F461CC1E7AD4C000431B4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
