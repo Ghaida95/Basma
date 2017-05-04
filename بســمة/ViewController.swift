@@ -28,6 +28,17 @@ class ViewController: UIViewController {
         }
     }*/
 
+    
+    func TestFunc() {
+    
+    
+    
+    }
+    
+    
+    
+    
+    
 
     @IBAction func AfterEnterPasscodeNextButtonPressed(_ sender: UIButton) {
         if (FirstPasscodeTextField.text == "" || SecondPasscodeTextField.text == "") {

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Ik-jl-6wU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Ik-jl-6wU">
     <device id="ipad12_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -203,10 +203,10 @@
             </objects>
             <point key="canvasLocation" x="954.49218749999989" y="141.40625"/>
         </scene>
-        <!--View Controller-->
+        <!--Story Controller-->
         <scene sceneID="BZB-xg-2hN">
             <objects>
-                <viewController modalTransitionStyle="partialCurl" id="thc-sd-9Tx" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" id="thc-sd-9Tx" customClass="StoryController" customModule="بســمة" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t7Q-Il-MMW"/>
                         <viewControllerLayoutGuide type="bottom" id="cgv-Fz-2BL"/>
@@ -242,13 +242,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="506" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="BqG-XR-apP">
+                                <rect key="frame" x="149" y="236" width="545" height="374"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="storyImg" destination="BqG-XR-apP" id="YQZ-eF-tsK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O3M-8e-uwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1358" y="1592"/>
+            <point key="canvasLocation" x="-1358.125915080527" y="1591.9921875"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PTB-bb-Z77">
@@ -927,6 +934,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="1024" height="768"/>
         <image name="ChildGray" width="506" height="71"/>
         <image name="ParentGray" width="491" height="59"/>
         <image name="add (1)" width="64" height="53"/>
@@ -945,11 +953,11 @@
         <image name="unchecked" width="501" height="501"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0gf-x8-8au"/>
-        <segue reference="MdC-me-tep"/>
-        <segue reference="oYh-9V-skj"/>
-        <segue reference="YYj-Ua-gJ5"/>
-        <segue reference="PS5-Ve-SeQ"/>
+        <segue reference="eMH-j7-aC9"/>
         <segue reference="xYX-rW-1qe"/>
+        <segue reference="AP2-ex-t4g"/>
+        <segue reference="Md3-NS-2jn"/>
+        <segue reference="YYj-Ua-gJ5"/>
+        <segue reference="oYh-9V-skj"/>
     </inferredMetricsTieBreakers>
 </document>

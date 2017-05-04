@@ -20,6 +20,7 @@
 		77F461B51E7AD4C000431B4A /* ______Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F461B41E7AD4C000431B4A /* ______Tests.swift */; };
 		77F461C01E7AD4C000431B4A /* ______UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F461BF1E7AD4C000431B4A /* ______UITests.swift */; };
 		D2ABA0661EB93112007C3465 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ABA0651EB93112007C3465 /* LineChart.swift */; };
+		D2ECAA311EBAFA10004CE19F /* StoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ECAA301EBAFA10004CE19F /* StoryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		77F461BF1E7AD4C000431B4A /* ______UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "______UITests.swift"; sourceTree = "<group>"; };
 		77F461C11E7AD4C000431B4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2ABA0651EB93112007C3465 /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		D2ECAA301EBAFA10004CE19F /* StoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				77F461A61E7AD4C000431B4A /* Assets.xcassets */,
 				77F461A81E7AD4C000431B4A /* LaunchScreen.storyboard */,
 				77F461AB1E7AD4C000431B4A /* Info.plist */,
+				D2ECAA301EBAFA10004CE19F /* StoryController.swift */,
 			);
 			path = "بســمة";
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				77F461A01E7AD4BF00431B4A /* AppDelegate.swift in Sources */,
 				774A87A51EA15CB10030A6FA /* ParentControlPanel.swift in Sources */,
 				D2ABA0661EB93112007C3465 /* LineChart.swift in Sources */,
+				D2ECAA311EBAFA10004CE19F /* StoryController.swift in Sources */,
 				774A87A91EA17DED0030A6FA /* EditAddChild.swift in Sources */,
 				77528E9F1E7BC8170045ECE0 /* BounceButton.swift in Sources */,
 			);
