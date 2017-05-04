@@ -30,6 +30,7 @@ class EditAddChild: UIViewController {
     var IsBoxClicked1: Bool!
     var IsBoxClicked2: Bool!
     var IsBoxClicked3: Bool!
+    var IsBoxClicked4: Bool!
     
     @IBOutlet weak var childName: UITextField!
     var childN: String!
