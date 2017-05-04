@@ -13,7 +13,9 @@ class StoryController: UIViewController {
 
     @IBOutlet weak var storyImg: UIImageView!
     
-  //  var timer;
+    @IBOutlet weak var rightArrow: UIButton!
+
+    @IBOutlet weak var leftArrow: UIButton!
     
     
     override func viewDidLoad() {
