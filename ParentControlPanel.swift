@@ -50,12 +50,41 @@ class ParentControlPanel : UIViewController {
     var lineChart: LineChart!
     
 
-    //ghaida//
+    // stars variables
+    var totalStars = 0
+    var displayedStars = 0
+    var morningStars = 0
+    var nightStars = 0
+    var brushTeethStars = 0
+    var kissParentsStars = 0
+    var bedtimeStars = 0
+    
     
     
     override func viewDidLoad() {
      super.viewDidLoad()
 
+        
+        
+        UserDefaults.standard.set(6, forKey: "totalStars")
+        UserDefaults.standard.set(3, forKey: "morningStars")
+        UserDefaults.standard.set(20, forKey: "nightStars")
+        UserDefaults.standard.set(10, forKey: "brushTeethStars")
+        UserDefaults.standard.set(5, forKey: "kissParentsStars")
+        UserDefaults.standard.set(8, forKey: "bedtimeStars")
+        
+        
+        
+        
+        // load stars values
+        totalStars = UserDefaults.standard.integer(forKey: "totalStars")
+         morningStars = UserDefaults.standard.integer(forKey: "morningStars")
+         nightStars = UserDefaults.standard.integer(forKey: "nightStars")
+         brushTeethStars = UserDefaults.standard.integer(forKey: "brushTeethStars")
+         kissParentsStars = UserDefaults.standard.integer(forKey: "kissParentsStars")
+        bedtimeStars = UserDefaults.standard.integer(forKey: "bedtimeStars")
+        
+        
         
         // create chart and view data
        createChart()
@@ -101,9 +130,9 @@ class ParentControlPanel : UIViewController {
         // Chart Code (Child progress)
         var views: [String: AnyObject] = [:]
         
-        // simple array of chart values
-        let data: [CGFloat] = [5, 4, 3, 11, 13]
-        
+        // simple array of chart values (from database)
+     //   let data: [CGFloat] = [5, 4, 3, 11, 13]
+        let data: [CGFloat] = [CGFloat(morningStars), CGFloat(nightStars), CGFloat(brushTeethStars), CGFloat(kissParentsStars), CGFloat(bedtimeStars)]
         // simple line with custom x axis labels
         
         let xLabels: [String] = ["صباح", "مساء", "تفريش الأسنان", "تقبيل الوالدين", "أذكار النوم"]
@@ -113,7 +142,7 @@ class ParentControlPanel : UIViewController {
         lineChart.area = false
         lineChart.x.labels.visible = false
         lineChart.x.labels.values = xLabels
-        lineChart.y.labels.visible = false 
+        lineChart.y.labels.visible = true
         lineChart.addLine(data)
         lineChart.x.grid.visible = false
         lineChart.y.grid.visible = false
@@ -123,7 +152,7 @@ class ParentControlPanel : UIViewController {
         lineChart.delegate = self as? LineChartDelegate
         self.view.addSubview(lineChart)
         views["chart"] = lineChart
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-74-[chart(==300)]", options: [], metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-74-[chart(==370)]", options: [], metrics: nil, views: views))
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[chart(==370)]-125-|", options: [], metrics: nil, views: views))
         
         
@@ -440,7 +469,76 @@ class ParentControlPanel : UIViewController {
     
     */
     
+ 
     
+    // calculate stars and store them 
+    
+    func calculateStars(action: String) {
+    
+
+    
+        totalStars += 1
+        
+        
+        if (totalStars == 125) {
+        displayedStars = 5
+        }
+        else if (totalStars >= 100) {
+            displayedStars = 4
+        }
+        else if (totalStars >= 75) {
+            displayedStars = 3
+        }
+        else if (totalStars >= 50) {
+            displayedStars = 2
+        }
+        else if (totalStars >= 25) {
+            displayedStars = 1
+        }
+        else if (totalStars > 125) {
+            displayedStars = 0
+            totalStars = 1
+            morningStars = 0
+            nightStars = 0
+            brushTeethStars = 0
+            kissParentsStars = 0
+            bedtimeStars = 0
+
+        }
+    
+        
+        switch action {
+            
+        case "morningAthkar" :
+            morningStars += 1
+        case "nightAthkar" :
+            nightStars += 1
+        case "brushingTeeth" :
+            brushTeethStars += 1
+        case "kissingParents" :
+            kissParentsStars += 1
+        case "bedtimeAthkar" :
+            bedtimeStars += 1
+        default: break
+            
+        }
+        
+        // save to database 
+        
+        UserDefaults.standard.set(totalStars, forKey: "totalStars")
+        UserDefaults.standard.set(morningStars, forKey: "morningStars")
+        UserDefaults.standard.set(nightStars, forKey: "nightStars")
+        UserDefaults.standard.set(brushTeethStars, forKey: "brushTeethStars")
+        UserDefaults.standard.set(kissParentsStars, forKey: "kissParentsStars")
+        UserDefaults.standard.set(bedtimeStars, forKey: "bedtimeStars")
+        
+        
+        
+    } // end calculateStars method
+
+
+
+
     @IBAction func GoToChildViewPressed(_ sender: UIButton) {
         if ChildNameInParentLabel.text == ""{
             let alert = UIAlertController(title: "تنبيه", message: " الرجاء تسجيل بيانات طفلتك", preferredStyle: UIAlertControllerStyle.alert)

@@ -215,10 +215,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stoiestelling" translatesAutoresizingMaskIntoConstraints="NO" id="NDb-EH-wDU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="BqG-XR-apP">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2G-f6-P7p">
+                                <rect key="frame" x="904" y="657" width="65" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="rightArrow"/>
+                                <connections>
+                                    <action selector="rightPressed:" destination="thc-sd-9Tx" eventType="touchUpInside" id="U82-OK-Wkl"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8Rv-ZG-ph0" customClass="BounceButton" customModule="بســمة" customModuleProvider="target">
                                 <rect key="frame" x="59" y="657" width="123" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -238,30 +246,11 @@
                                     <segue destination="nVr-I2-eZc" kind="show" id="eMH-j7-aC9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTJ-1I-o3A">
-                                <rect key="frame" x="0.0" y="0.0" width="506" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="BqG-XR-apP">
-                                <rect key="frame" x="149" y="236" width="545" height="374"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5Y-8E-91n">
-                                <rect key="frame" x="221" y="657" width="65" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="leftArrow"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2G-f6-P7p">
-                                <rect key="frame" x="904" y="657" width="65" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="rightArrow"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="leftArrow" destination="t5Y-8E-91n" id="Epp-bg-lex"/>
-                        <outlet property="rightArrow" destination="e2G-f6-P7p" id="40a-if-Cjt"/>
+                        <outlet property="nextButton" destination="e2G-f6-P7p" id="2zg-h3-eU4"/>
                         <outlet property="storyImg" destination="BqG-XR-apP" id="YQZ-eF-tsK"/>
                     </connections>
                 </viewController>
@@ -958,10 +947,8 @@
         <image name="con2" width="1024" height="768"/>
         <image name="edit" width="79" height="65"/>
         <image name="editadd" width="1024" height="768"/>
-        <image name="leftArrow" width="256" height="256"/>
         <image name="parent11" width="1024" height="768"/>
         <image name="rightArrow" width="256" height="256"/>
-        <image name="stoiestelling" width="1024" height="768"/>
         <image name="storieslocked" width="1024" height="768"/>
         <image name="storiesmain" width="1024" height="768"/>
         <image name="unchecked" width="501" height="501"/>
