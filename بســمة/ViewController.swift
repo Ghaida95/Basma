@@ -14,12 +14,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var FirstPasscodeTextField: UITextField!
     
     @IBOutlet weak var SecondPasscodeTextField: UITextField!
+
     
+    
+
     override func viewDidLoad() {
     super.viewDidLoad()
 
 
     }
+    
+    
+
+    
 /*    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         if UserDefaults.standard.string(forKey: "Passcode") == "alaa" {

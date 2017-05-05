@@ -11,6 +11,7 @@
 		774A87A91EA17DED0030A6FA /* EditAddChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A87A81EA17DED0030A6FA /* EditAddChild.swift */; };
 		77528E9B1E7BBF5E0045ECE0 /* www.Brushez.com-Boahmed Alhour.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77528E9A1E7BBF5E0045ECE0 /* www.Brushez.com-Boahmed Alhour.ttf */; };
 		77528E9F1E7BC8170045ECE0 /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77528E9E1E7BC8170045ECE0 /* BounceButton.swift */; };
+		7757C51A1EBD01A80066F9B1 /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757C5191EBD01A80066F9B1 /* BackgroundTask.swift */; };
 		77A280E11EA2CE580087FA22 /* CheckPassCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A280E01EA2CE580087FA22 /* CheckPassCode.swift */; };
 		77F461A01E7AD4BF00431B4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4619F1E7AD4BF00431B4A /* AppDelegate.swift */; };
 		77F461A21E7AD4BF00431B4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F461A11E7AD4BF00431B4A /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 		774A87A81EA17DED0030A6FA /* EditAddChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAddChild.swift; sourceTree = "<group>"; };
 		77528E9A1E7BBF5E0045ECE0 /* www.Brushez.com-Boahmed Alhour.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "www.Brushez.com-Boahmed Alhour.ttf"; path = "../../../Downloads/Brushez.com-40242-Boahmed Alhour/www.Brushez.com-Boahmed Alhour.ttf"; sourceTree = "<group>"; };
 		77528E9E1E7BC8170045ECE0 /* BounceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
+		7757C5191EBD01A80066F9B1 /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 		77A280E01EA2CE580087FA22 /* CheckPassCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckPassCode.swift; sourceTree = "<group>"; };
 		77F4619C1E7AD4BF00431B4A /* بســمة.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "بســمة.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F4619F1E7AD4BF00431B4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				77F4619F1E7AD4BF00431B4A /* AppDelegate.swift */,
 				77F461A11E7AD4BF00431B4A /* ViewController.swift */,
 				774A87A41EA15CB10030A6FA /* ParentControlPanel.swift */,
+				7757C5191EBD01A80066F9B1 /* BackgroundTask.swift */,
 				774A87A81EA17DED0030A6FA /* EditAddChild.swift */,
 				77A280E01EA2CE580087FA22 /* CheckPassCode.swift */,
 				77F461A31E7AD4BF00431B4A /* Main.storyboard */,
@@ -225,6 +228,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = R9SR56F437;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					77F461AF1E7AD4C000431B4A = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -293,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7757C51A1EBD01A80066F9B1 /* BackgroundTask.swift in Sources */,
 				77A280E11EA2CE580087FA22 /* CheckPassCode.swift in Sources */,
 				77F461A21E7AD4BF00431B4A /* ViewController.swift in Sources */,
 				77F461A01E7AD4BF00431B4A /* AppDelegate.swift in Sources */,

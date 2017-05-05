@@ -16,46 +16,37 @@ class ParentControlPanel : UIViewController {
     @IBOutlet weak var ChildNameInParentLabel: UILabel!
     @IBOutlet weak var AddChildButton: UIButton!
     @IBOutlet weak var EditChildButton: UIButton!
-    
-
     @IBOutlet weak var AvatarPic: UIImageView!
+    
+    var timer = Timer()
+    var backgroundTask = BackgroundTask()
     
     //alaa//
     
     //ghaida//
     // Time text fields
     @IBOutlet weak var datePickerTxt1: UITextField!
-    
     @IBOutlet weak var datePickerTxt2: UITextField!
-    
     @IBOutlet weak var datePickerTxt3: UITextField!
-    
     @IBOutlet weak var datePickerTxt4: UITextField!
-    
     @IBOutlet weak var datePickerTxt5: UITextField!
     
     // Time enabling switches
     @IBOutlet weak var switchBtn1: UISwitch!
-    
     @IBOutlet weak var switchBtn2: UISwitch!
-    
     @IBOutlet weak var switchBtn3: UISwitch!
-    
     @IBOutlet weak var switchBtn4: UISwitch!
-    
     @IBOutlet weak var switchBtn5: UISwitch!
     
     
     // Chart
     var lineChart: LineChart!
-    
 
     //ghaida//
     
     
     override func viewDidLoad() {
      super.viewDidLoad()
-
         
         // create chart and view data
        createChart()
@@ -65,8 +56,6 @@ class ParentControlPanel : UIViewController {
         
         // set switches (on/off) with time
         setSwitches()
-        
-        
         
         //to control add/edit button
         if UserDefaults.standard.bool(forKey: "SaveButton") == false {
@@ -86,7 +75,6 @@ class ParentControlPanel : UIViewController {
         
     }// End view load
     
-    
     //ghaida//
 
     
@@ -96,7 +84,6 @@ class ParentControlPanel : UIViewController {
     
     
     func createChart() {
-        
         
         // Chart Code (Child progress)
         var views: [String: AnyObject] = [:]
@@ -146,40 +133,29 @@ class ParentControlPanel : UIViewController {
         datePicker4.datePickerMode = .time
         datePicker5.datePickerMode = .time
         
-        
         //toolbar
         let toolbar1 = UIToolbar()
         toolbar1.sizeToFit()
-        
         let toolbar2 = UIToolbar()
         toolbar2.sizeToFit()
-        
         let toolbar3 = UIToolbar()
         toolbar3.sizeToFit()
-        
         let toolbar4 = UIToolbar()
         toolbar4.sizeToFit()
-        
         let toolbar5 = UIToolbar()
         toolbar5.sizeToFit()
-        
         
         // bar button item
         let doneButton1 = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed1))
         toolbar1.setItems([doneButton1], animated: false)
-        
         let doneButton2 = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed2))
         toolbar2.setItems([doneButton2], animated: false)
-        
         let doneButton3 = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed3))
         toolbar3.setItems([doneButton3], animated: false)
-        
         let doneButton4 = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed4))
         toolbar4.setItems([doneButton4], animated: false)
-        
         let doneButton5 = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed5))
         toolbar5.setItems([doneButton5], animated: false)
-        
         
         datePickerTxt1.inputAccessoryView = toolbar1
         datePickerTxt2.inputAccessoryView = toolbar2
@@ -262,12 +238,57 @@ class ParentControlPanel : UIViewController {
         
     }
     
+    func startBackgroundTask() {
+        backgroundTask.startBackgroundTask()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.timerAction), userInfo: nil, repeats: true)
+    }//end startBackgroundTask
+    
+    func stopBackgroundTask() {
+        timer.invalidate()
+        backgroundTask.stopBackgroundTask()
+    }//end stopBackgroundTask
+    
+    func timerAction() {
+        
+        if (UserDefaults.standard.string(forKey: "switchBtn1Stat") == "on" && UserDefaults.standard.string(forKey: "switchBtn1Time") != "" ) {
+            //to convert the format
+            let dateAsString = UserDefaults.standard.string(forKey: "switchBtn1Time")
+            let dateFormatter = DateFormatter ()
+            dateFormatter.dateFormat = "h:mm a"
+            let d = dateFormatter.date(from: dateAsString!)
+            dateFormatter.dateFormat = "HH:mm"
+            let d24 = dateFormatter.string(from: d!)
+            let d24tostring = String(d24)
+            //to get current date
+            let date = Date()
+            let calendar = Calendar.current
+            let hour = calendar.component(.hour, from: date)
+            let minutes = calendar.component(.minute, from: date)
+            let seconds = calendar.component(.second, from: date)
+            let TimeNow = String(hour) + ":" + String(minutes)
+            print("\(hour):\(minutes) \(seconds)")
+
+            if(TimeNow == d24tostring){
+                //send notification to the child by blutooth
+                datePickerTxt5.text="yes" //just for test
+            }//second if
+        }//first if
+        print("SomeCoolTaskRunning.....")//just for test
+        print(UserDefaults.standard.string(forKey: "switchBtn1Stat") ?? "No1" )//just for test
+        print(UserDefaults.standard.string(forKey: "switchBtn1Time") ?? "No2")//just for test
+    }//end timerAction
+    
+        
     
     @IBAction func switch1Changed(_ sender: UISwitch) {
         
+
+        
         if switchBtn1.isOn {
+            
             datePickerTxt1.isHidden = false
             UserDefaults.standard.set("on", forKey: "switchBtn1Stat")
+                    startBackgroundTask()
             
         }
         else {
@@ -424,21 +445,6 @@ class ParentControlPanel : UIViewController {
     
  
     //ghaida//
-    
-    /*
-    func userDidEnterData(data: String) {
-        ChildNameInParentLabel.text = data
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showSendingVC" {
-            let sendingVC: EditAddChild = segue.destination as! EditAddChild
-            sendingVC.delegate = self
-            
-        }
-    }
-    
-    */
     
     
     @IBAction func GoToChildViewPressed(_ sender: UIButton) {
