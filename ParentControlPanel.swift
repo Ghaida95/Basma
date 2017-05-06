@@ -16,11 +16,14 @@ class ParentControlPanel : UIViewController {
     @IBOutlet weak var ChildNameInParentLabel: UILabel!
     @IBOutlet weak var AddChildButton: UIButton!
     @IBOutlet weak var EditChildButton: UIButton!
-    
-
     @IBOutlet weak var AvatarPic: UIImageView!
     
     //alaa//
+    var timer = Timer()
+    var backgroundTask = BackgroundTask()
+
+    
+    
     
     //ghaida//
     // Time text fields
@@ -290,6 +293,52 @@ class ParentControlPanel : UIViewController {
         }
         
     }
+    
+    
+    // Reninders methods
+    
+    func startBackgroundTask() {
+        backgroundTask.startBackgroundTask()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.timerAction), userInfo: nil, repeats: true)
+    }//end startBackgroundTask
+    
+    func stopBackgroundTask() {
+        timer.invalidate()
+        backgroundTask.stopBackgroundTask()
+    }//end stopBackgroundTask
+    
+    func timerAction() {
+        
+        if (UserDefaults.standard.string(forKey: "switchBtn1Stat") == "on" && UserDefaults.standard.string(forKey: "switchBtn1Time") != "" ) {
+            //to convert the format
+            let dateAsString = UserDefaults.standard.string(forKey: "switchBtn1Time")
+            let dateFormatter = DateFormatter ()
+            dateFormatter.dateFormat = "h:mm a"
+            let d = dateFormatter.date(from: dateAsString!)
+            dateFormatter.dateFormat = "HH:mm"
+            let d24 = dateFormatter.string(from: d!)
+            let d24tostring = String(d24)
+            //to get current date
+            let date = Date()
+            let calendar = Calendar.current
+            let hour = calendar.component(.hour, from: date)
+            let minutes = calendar.component(.minute, from: date)
+            let seconds = calendar.component(.second, from: date)
+            let TimeNow = String(hour) + ":" + String(minutes)
+            print("\(hour):\(minutes) \(seconds)")
+            
+            if(TimeNow == d24tostring){
+                //send notification to the child by blutooth
+                datePickerTxt5.text="yes" //just for test
+            }//second if
+        }//first if
+        print("SomeCoolTaskRunning.....")//just for test
+        print(UserDefaults.standard.string(forKey: "switchBtn1Stat") ?? "No1" )//just for test
+        print(UserDefaults.standard.string(forKey: "switchBtn1Time") ?? "No2")//just for test
+    }//end timerAction
+    
+
+    
     
     
     @IBAction func switch1Changed(_ sender: UISwitch) {
