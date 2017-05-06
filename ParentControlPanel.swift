@@ -346,6 +346,7 @@ class ParentControlPanel : UIViewController {
         if switchBtn1.isOn {
             datePickerTxt1.isHidden = false
             UserDefaults.standard.set("on", forKey: "switchBtn1Stat")
+            startBackgroundTask()
             
         }
         else {
