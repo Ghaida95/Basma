@@ -20,15 +20,15 @@ class StoryController: UIViewController {
     
     var imagesArray2: [String] = ["29", "30","31"]
     
-    var imagesArray3: [String] = ["49", "50","51","52"]
+    var imagesArray3: [String] = ["50","51","52","53"]
     
     var imagesChoice1_a: [String] = ["23a", "24a"]
     
     var imagesChoice1_b: [String] = ["23b", "24b","25b","26b","27b","28b"]
     
-    var imagesChoice2_a: [String] = ["32a", "33a","34a","35a","36a","37a", "38a","39a","40a","41a","42a","43a","44a","45a"]
+    var imagesChoice2_a: [String] = ["32a", "33a","34a","35a","36a","37a", "38a","39a","40a","41a","42a","43a","44a"]
     
-    var imagesChoice2_b: [String] = ["32b", "33b","34b","35b","36b","37b", "38b","39b","40b","41b","42b","43b","44b","45b","46b","47b","48b"]
+    var imagesChoice2_b: [String] = ["32b", "33b","34b","35b","36b","37b", "38b","39b","40b","41b","42b","43b","44b","45b","46b","47b","48b","49b"]
     
     
     var imagePosition = 0
@@ -78,12 +78,12 @@ class StoryController: UIViewController {
         
         }
             // check if its one of the two pictures that are the end of the SECOND branch
-            else if (currentImage == "45a") || (currentImage == "48b") {
+            else if (currentImage == "44a") || (currentImage == "49b") {
             currentArray = "imagesArray3"
             imagePosition = 0
             
             }
-        else if (currentImage == "52") {
+        else if (currentImage == "53") {
         storyImg.isHidden = true
         nextButton.isHidden = true
         return
