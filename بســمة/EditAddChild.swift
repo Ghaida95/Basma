@@ -23,6 +23,7 @@ class EditAddChild: UIViewController {
     @IBOutlet weak var Box1: UIButton!
     
     
+    
     //to upload checked/unchecked image
     var BoxOn = UIImage(named: "checked" )
     var BoxOff = UIImage(named: "unchecked" )
