@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Ik-jl-6wU">
-    <device id="ipad12_9" orientation="landscape">
+    <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,11 +23,11 @@
                         <viewControllerLayoutGuide type="bottom" id="heP-8T-SDv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LGF-B6-trL">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parent11" translatesAutoresizingMaskIntoConstraints="NO" id="qgw-id-ieH">
-                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="الرقم السري" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="ApM-DL-gqU">
                                 <rect key="frame" x="392" y="272" width="278" height="39"/>
@@ -69,9 +69,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qgw-id-ieH" firstAttribute="leading" secondItem="LGF-B6-trL" secondAttribute="leading" id="4hd-oF-vGl"/>
+                            <constraint firstItem="qgw-id-ieH" firstAttribute="top" secondItem="LGF-B6-trL" secondAttribute="top" id="7Sq-kC-mSD"/>
                             <constraint firstAttribute="trailing" secondItem="qgw-id-ieH" secondAttribute="trailing" id="C35-XB-ZeT"/>
                             <constraint firstItem="heP-8T-SDv" firstAttribute="top" secondItem="qgw-id-ieH" secondAttribute="bottom" id="E8b-Wa-6av"/>
+                            <constraint firstItem="heP-8T-SDv" firstAttribute="top" secondItem="qgw-id-ieH" secondAttribute="bottom" id="R1U-gb-RHt"/>
                             <constraint firstItem="qgw-id-ieH" firstAttribute="top" secondItem="LGF-B6-trL" secondAttribute="top" id="WUV-58-J48"/>
+                            <constraint firstItem="qgw-id-ieH" firstAttribute="leading" secondItem="LGF-B6-trL" secondAttribute="leading" id="Zmm-tw-Vnb"/>
+                            <constraint firstAttribute="trailing" secondItem="qgw-id-ieH" secondAttribute="trailing" id="uf3-o6-tVa"/>
                         </constraints>
                     </view>
                     <connections>
@@ -92,11 +96,11 @@
                         <viewControllerLayoutGuide type="bottom" id="mSO-zf-8yQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="r2p-YZ-SnI">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="con1" translatesAutoresizingMaskIntoConstraints="NO" id="zVh-Tu-oZx">
-                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2c-Va-O4k" customClass="BounceButton" customModule="بســمة" customModuleProvider="target">
                                 <rect key="frame" x="466" y="365" width="93" height="51"/>
@@ -134,7 +138,11 @@
                         <constraints>
                             <constraint firstItem="zVh-Tu-oZx" firstAttribute="leading" secondItem="r2p-YZ-SnI" secondAttribute="leading" id="3qa-4e-Mwz"/>
                             <constraint firstAttribute="trailing" secondItem="zVh-Tu-oZx" secondAttribute="trailing" id="AAU-Ta-6Cp"/>
+                            <constraint firstAttribute="trailing" secondItem="zVh-Tu-oZx" secondAttribute="trailing" id="ORI-l6-TdF"/>
+                            <constraint firstItem="mSO-zf-8yQ" firstAttribute="top" secondItem="zVh-Tu-oZx" secondAttribute="bottom" id="Wn1-D2-yak"/>
                             <constraint firstItem="zVh-Tu-oZx" firstAttribute="top" secondItem="r2p-YZ-SnI" secondAttribute="top" id="ZQl-TY-mlh"/>
+                            <constraint firstItem="zVh-Tu-oZx" firstAttribute="top" secondItem="r2p-YZ-SnI" secondAttribute="top" id="cmK-EH-dkT"/>
+                            <constraint firstItem="zVh-Tu-oZx" firstAttribute="leading" secondItem="r2p-YZ-SnI" secondAttribute="leading" id="fMn-cq-WfA"/>
                             <constraint firstItem="mSO-zf-8yQ" firstAttribute="top" secondItem="zVh-Tu-oZx" secondAttribute="bottom" id="uUc-ch-SPU"/>
                         </constraints>
                     </view>
@@ -146,17 +154,17 @@
         <!--View Controller-->
         <scene sceneID="acF-VQ-3FR">
             <objects>
-                <viewController modalTransitionStyle="partialCurl" id="1DX-Cg-yUB" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="1DX-Cg-yUB" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DP8-qE-QQw"/>
                         <viewControllerLayoutGuide type="bottom" id="nfy-QX-5gS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kKW-AC-8E0">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="con2" translatesAutoresizingMaskIntoConstraints="NO" id="Oa9-qI-IZA">
-                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uud-Wf-rB3">
                                 <rect key="frame" x="518" y="0.0" width="506" height="72"/>
@@ -190,10 +198,14 @@
                         <constraints>
                             <constraint firstItem="Oa9-qI-IZA" firstAttribute="top" secondItem="kKW-AC-8E0" secondAttribute="top" id="Dl8-7g-T01"/>
                             <constraint firstItem="Oa9-qI-IZA" firstAttribute="leading" secondItem="kKW-AC-8E0" secondAttribute="leading" id="KHY-aD-5LT"/>
+                            <constraint firstItem="nfy-QX-5gS" firstAttribute="top" secondItem="Oa9-qI-IZA" secondAttribute="bottom" id="QHi-D8-rcy"/>
                             <constraint firstItem="Oa9-qI-IZA" firstAttribute="leading" secondItem="kKW-AC-8E0" secondAttribute="leading" id="STQ-So-Ewd"/>
                             <constraint firstItem="nfy-QX-5gS" firstAttribute="top" secondItem="Oa9-qI-IZA" secondAttribute="bottom" id="UF0-aJ-yQd"/>
                             <constraint firstAttribute="trailing" secondItem="Oa9-qI-IZA" secondAttribute="trailing" id="UUn-lU-Ysg"/>
                             <constraint firstItem="Oa9-qI-IZA" firstAttribute="top" secondItem="kKW-AC-8E0" secondAttribute="top" id="bWA-cq-PWj"/>
+                            <constraint firstItem="Oa9-qI-IZA" firstAttribute="top" secondItem="kKW-AC-8E0" secondAttribute="top" id="fIO-HS-qMf"/>
+                            <constraint firstAttribute="trailing" secondItem="Oa9-qI-IZA" secondAttribute="trailing" id="imk-0O-SOk"/>
+                            <constraint firstItem="Oa9-qI-IZA" firstAttribute="leading" secondItem="kKW-AC-8E0" secondAttribute="leading" id="oZA-04-did"/>
                             <constraint firstItem="nfy-QX-5gS" firstAttribute="top" secondItem="Oa9-qI-IZA" secondAttribute="bottom" id="qwY-48-baX"/>
                             <constraint firstAttribute="trailing" secondItem="Oa9-qI-IZA" secondAttribute="trailing" id="rrk-7x-0op"/>
                         </constraints>
@@ -206,13 +218,13 @@
         <!--Story Controller-->
         <scene sceneID="BZB-xg-2hN">
             <objects>
-                <viewController modalTransitionStyle="partialCurl" id="thc-sd-9Tx" customClass="StoryController" customModule="بســمة" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="thc-sd-9Tx" customClass="StoryController" customModule="بســمة" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t7Q-Il-MMW"/>
                         <viewControllerLayoutGuide type="bottom" id="cgv-Fz-2BL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rXW-zU-pQj">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="BqG-XR-apP">
@@ -261,17 +273,17 @@
         <!--View Controller-->
         <scene sceneID="PTB-bb-Z77">
             <objects>
-                <viewController modalTransitionStyle="partialCurl" id="FQ1-Sk-J2j" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="FQ1-Sk-J2j" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tVO-ev-Fb5"/>
                         <viewControllerLayoutGuide type="bottom" id="rri-1U-yAP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bZl-CQ-my9">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="storieslocked" translatesAutoresizingMaskIntoConstraints="NO" id="jdq-iC-9rR">
-                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="21y-3t-Ikh" customClass="BounceButton" customModule="بســمة" customModuleProvider="target">
                                 <rect key="frame" x="59" y="664" width="123" height="50"/>
@@ -305,7 +317,15 @@
                         <constraints>
                             <constraint firstItem="jdq-iC-9rR" firstAttribute="leading" secondItem="bZl-CQ-my9" secondAttribute="leading" id="2UZ-bU-2xT"/>
                             <constraint firstItem="jdq-iC-9rR" firstAttribute="top" secondItem="bZl-CQ-my9" secondAttribute="top" id="6kQ-Po-ay7"/>
+                            <constraint firstItem="jdq-iC-9rR" firstAttribute="leading" secondItem="bZl-CQ-my9" secondAttribute="leading" id="IRk-pE-P7A"/>
+                            <constraint firstItem="jdq-iC-9rR" firstAttribute="leading" secondItem="bZl-CQ-my9" secondAttribute="leading" id="NXO-CK-vs6"/>
+                            <constraint firstAttribute="trailing" secondItem="jdq-iC-9rR" secondAttribute="trailing" id="R6G-YN-XBN"/>
+                            <constraint firstAttribute="trailing" secondItem="jdq-iC-9rR" secondAttribute="trailing" id="Rhh-1e-pKb"/>
+                            <constraint firstItem="rri-1U-yAP" firstAttribute="top" secondItem="jdq-iC-9rR" secondAttribute="bottom" id="SlO-jd-aH9"/>
+                            <constraint firstItem="rri-1U-yAP" firstAttribute="top" secondItem="jdq-iC-9rR" secondAttribute="bottom" id="nvC-s3-rk1"/>
                             <constraint firstItem="rri-1U-yAP" firstAttribute="top" secondItem="jdq-iC-9rR" secondAttribute="bottom" id="sq1-Kn-1Bo"/>
+                            <constraint firstItem="jdq-iC-9rR" firstAttribute="top" secondItem="bZl-CQ-my9" secondAttribute="top" id="xAJ-kh-cL3"/>
+                            <constraint firstItem="jdq-iC-9rR" firstAttribute="top" secondItem="bZl-CQ-my9" secondAttribute="top" id="xrV-gz-6ze"/>
                             <constraint firstAttribute="trailing" secondItem="jdq-iC-9rR" secondAttribute="trailing" id="yS6-rQ-9ps"/>
                         </constraints>
                     </view>
@@ -323,11 +343,11 @@
                         <viewControllerLayoutGuide type="bottom" id="yC1-dy-99U"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="J0C-o4-Lmw">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="storiesmain" translatesAutoresizingMaskIntoConstraints="NO" id="ZqV-i3-e1e">
-                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Oy7-V6-GCp" customClass="BounceButton" customModule="بســمة" customModuleProvider="target">
                                 <rect key="frame" x="56" y="653" width="123" height="50"/>
@@ -436,9 +456,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ZqV-i3-e1e" secondAttribute="trailing" id="1AY-uw-kJU"/>
+                            <constraint firstAttribute="trailing" secondItem="ZqV-i3-e1e" secondAttribute="trailing" id="2S9-IH-Jg0"/>
+                            <constraint firstItem="yC1-dy-99U" firstAttribute="top" secondItem="ZqV-i3-e1e" secondAttribute="bottom" id="AHF-lZ-N8h"/>
+                            <constraint firstItem="ZqV-i3-e1e" firstAttribute="leading" secondItem="J0C-o4-Lmw" secondAttribute="leading" id="Gpm-Uh-AU7"/>
                             <constraint firstItem="ZqV-i3-e1e" firstAttribute="leading" secondItem="J0C-o4-Lmw" secondAttribute="leading" id="Huk-cc-slG"/>
                             <constraint firstItem="ZqV-i3-e1e" firstAttribute="top" secondItem="J0C-o4-Lmw" secondAttribute="top" id="JCa-GC-Vhi"/>
                             <constraint firstItem="yC1-dy-99U" firstAttribute="top" secondItem="ZqV-i3-e1e" secondAttribute="bottom" id="agc-To-bcq"/>
+                            <constraint firstItem="ZqV-i3-e1e" firstAttribute="top" secondItem="J0C-o4-Lmw" secondAttribute="top" id="lza-Sl-rSD"/>
+                            <constraint firstItem="yC1-dy-99U" firstAttribute="top" secondItem="ZqV-i3-e1e" secondAttribute="bottom" id="pIa-JC-AYo"/>
+                            <constraint firstItem="ZqV-i3-e1e" firstAttribute="leading" secondItem="J0C-o4-Lmw" secondAttribute="leading" id="q1d-dF-ZIb"/>
+                            <constraint firstAttribute="trailing" secondItem="ZqV-i3-e1e" secondAttribute="trailing" id="rZz-Qi-kzd"/>
+                            <constraint firstItem="ZqV-i3-e1e" firstAttribute="top" secondItem="J0C-o4-Lmw" secondAttribute="top" id="sHL-ue-D2Z"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -449,17 +477,17 @@
         <!--View Controller-->
         <scene sceneID="oRk-Mo-0aT">
             <objects>
-                <viewController modalTransitionStyle="partialCurl" id="wS5-Ai-ymw" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="wS5-Ai-ymw" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Vb-go-LAz"/>
                         <viewControllerLayoutGuide type="bottom" id="Bgi-T6-xbs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xvB-wr-9gq">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="childdmain" translatesAutoresizingMaskIntoConstraints="NO" id="VOt-bJ-zeG">
-                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="uYU-CB-aG2" customClass="BounceButton" customModule="بســمة" customModuleProvider="target">
                                 <rect key="frame" x="589" y="119" width="247" height="180"/>
@@ -510,6 +538,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="VOt-bJ-zeG" firstAttribute="leading" secondItem="xvB-wr-9gq" secondAttribute="leading" id="0rL-wb-BwA"/>
+                            <constraint firstItem="VOt-bJ-zeG" firstAttribute="top" secondItem="xvB-wr-9gq" secondAttribute="top" id="CEm-jb-w06"/>
+                            <constraint firstItem="Bgi-T6-xbs" firstAttribute="top" secondItem="VOt-bJ-zeG" secondAttribute="bottom" id="EX5-tO-Pbr"/>
+                            <constraint firstAttribute="trailing" secondItem="VOt-bJ-zeG" secondAttribute="trailing" id="Kid-oo-2IY"/>
                             <constraint firstAttribute="trailing" secondItem="VOt-bJ-zeG" secondAttribute="trailing" id="PzM-ao-1tm"/>
                             <constraint firstItem="VOt-bJ-zeG" firstAttribute="leading" secondItem="xvB-wr-9gq" secondAttribute="leading" id="U6K-Le-7Hn"/>
                             <constraint firstItem="VOt-bJ-zeG" firstAttribute="top" secondItem="xvB-wr-9gq" secondAttribute="top" id="sxJ-Ud-3or"/>
@@ -524,17 +556,17 @@
         <!--View Controller-->
         <scene sceneID="67f-7i-Rcd">
             <objects>
-                <viewController id="Umy-ie-TtO" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="Umy-ie-TtO" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c4V-dk-LHC"/>
                         <viewControllerLayoutGuide type="bottom" id="pQ6-7j-pKe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dyV-Nw-mtW">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="child2athkar" translatesAutoresizingMaskIntoConstraints="NO" id="6lx-P0-xlz">
-                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Joc-VR-DL5" customClass="BounceButton" customModule="بســمة" customModuleProvider="target">
                                 <rect key="frame" x="63" y="656" width="123" height="50"/>
@@ -567,8 +599,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pQ6-7j-pKe" firstAttribute="top" secondItem="6lx-P0-xlz" secondAttribute="bottom" id="1Ds-wg-6Th"/>
+                            <constraint firstItem="6lx-P0-xlz" firstAttribute="leading" secondItem="dyV-Nw-mtW" secondAttribute="leading" id="K9z-Ha-osu"/>
                             <constraint firstItem="6lx-P0-xlz" firstAttribute="leading" secondItem="dyV-Nw-mtW" secondAttribute="leading" id="fK8-z8-GOO"/>
+                            <constraint firstAttribute="trailing" secondItem="6lx-P0-xlz" secondAttribute="trailing" id="nsh-D9-edm"/>
                             <constraint firstItem="6lx-P0-xlz" firstAttribute="top" secondItem="dyV-Nw-mtW" secondAttribute="top" id="qUb-L1-OMO"/>
+                            <constraint firstItem="6lx-P0-xlz" firstAttribute="top" secondItem="dyV-Nw-mtW" secondAttribute="top" id="uEC-IC-dha"/>
+                            <constraint firstItem="pQ6-7j-pKe" firstAttribute="top" secondItem="6lx-P0-xlz" secondAttribute="bottom" id="umb-ZC-GF4"/>
                             <constraint firstAttribute="trailing" secondItem="6lx-P0-xlz" secondAttribute="trailing" id="zJS-FY-EsA"/>
                         </constraints>
                     </view>
@@ -580,17 +616,17 @@
         <!--Parent Control Panel-->
         <scene sceneID="t8b-Uz-BSf">
             <objects>
-                <viewController id="pvm-Ev-sso" customClass="ParentControlPanel" customModule="بســمة" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="pvm-Ev-sso" customClass="ParentControlPanel" customModule="بســمة" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oIJ-wT-d4Y"/>
                         <viewControllerLayoutGuide type="bottom" id="YK9-mw-MOH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8OR-SH-eOg">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="addchild1" translatesAutoresizingMaskIntoConstraints="NO" id="HBK-LR-LjC">
-                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addchild1" translatesAutoresizingMaskIntoConstraints="NO" id="HBK-LR-LjC">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ZhZ-d0-MuF">
                                 <rect key="frame" x="613" y="315" width="51" height="31"/>
@@ -690,7 +726,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Kk-yO-Gj9">
-                                <rect key="frame" x="785" y="0.0" width="581" height="111"/>
+                                <rect key="frame" x="523" y="0.0" width="501" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ChildGray"/>
                                 <connections>
@@ -702,7 +738,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="HBK-LR-LjC" secondAttribute="trailing" id="4Hs-ZC-t6y"/>
+                            <constraint firstItem="HBK-LR-LjC" firstAttribute="top" secondItem="8OR-SH-eOg" secondAttribute="top" id="54m-kU-Gwa"/>
                             <constraint firstItem="HBK-LR-LjC" firstAttribute="top" secondItem="8OR-SH-eOg" secondAttribute="top" id="5o3-ST-3t5"/>
+                            <constraint firstAttribute="trailing" secondItem="HBK-LR-LjC" secondAttribute="trailing" id="6W0-kZ-X4q"/>
+                            <constraint firstItem="HBK-LR-LjC" firstAttribute="top" secondItem="8OR-SH-eOg" secondAttribute="top" id="B5P-n1-ARG"/>
+                            <constraint firstAttribute="trailing" secondItem="HBK-LR-LjC" secondAttribute="trailing" id="GTD-pE-syk"/>
+                            <constraint firstItem="HBK-LR-LjC" firstAttribute="leading" secondItem="8OR-SH-eOg" secondAttribute="leading" id="Iux-dt-zxJ"/>
+                            <constraint firstItem="YK9-mw-MOH" firstAttribute="top" secondItem="HBK-LR-LjC" secondAttribute="bottom" id="KDa-aS-YoS"/>
+                            <constraint firstItem="HBK-LR-LjC" firstAttribute="leading" secondItem="8OR-SH-eOg" secondAttribute="leading" id="KLa-HS-c4o"/>
+                            <constraint firstItem="YK9-mw-MOH" firstAttribute="top" secondItem="HBK-LR-LjC" secondAttribute="bottom" id="MEA-eP-5Id"/>
                             <constraint firstAttribute="trailing" secondItem="HBK-LR-LjC" secondAttribute="trailing" id="Z3R-hQ-wKS"/>
                             <constraint firstItem="HBK-LR-LjC" firstAttribute="leading" secondItem="8OR-SH-eOg" secondAttribute="leading" id="qcN-kD-QMs"/>
                             <constraint firstItem="HBK-LR-LjC" firstAttribute="leading" secondItem="8OR-SH-eOg" secondAttribute="leading" id="r5v-aW-pns"/>
@@ -728,22 +772,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hgJ-Dh-5nO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="959.29721815519758" y="924.60937499999989"/>
+            <point key="canvasLocation" x="959.17968749999989" y="924.21875"/>
         </scene>
         <!--Edit Add Child-->
         <scene sceneID="Xd0-e8-zfB">
             <objects>
-                <viewController id="e5e-jM-YqX" customClass="EditAddChild" customModule="بســمة" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="e5e-jM-YqX" customClass="EditAddChild" customModule="بســمة" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q8y-QS-uXk"/>
                         <viewControllerLayoutGuide type="bottom" id="Qy3-70-d3m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uEJ-mP-iLK">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="editadd" translatesAutoresizingMaskIntoConstraints="NO" id="Ufd-8w-eyd">
-                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="editadd" translatesAutoresizingMaskIntoConstraints="NO" id="Ufd-8w-eyd">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWn-ZM-Isv">
                                 <rect key="frame" x="518" y="0.0" width="506" height="72"/>
@@ -846,10 +890,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Ufd-8w-eyd" firstAttribute="top" secondItem="uEJ-mP-iLK" secondAttribute="top" id="8cd-QN-WmB"/>
+                            <constraint firstItem="Ufd-8w-eyd" firstAttribute="leading" secondItem="uEJ-mP-iLK" secondAttribute="leading" id="Gvy-3B-Dbj"/>
                             <constraint firstAttribute="leading" secondItem="Ufd-8w-eyd" secondAttribute="leading" id="Pow-P3-dmW"/>
+                            <constraint firstItem="Ufd-8w-eyd" firstAttribute="leading" secondItem="uEJ-mP-iLK" secondAttribute="leading" id="Xd8-LS-zvU"/>
+                            <constraint firstItem="Ufd-8w-eyd" firstAttribute="top" secondItem="uEJ-mP-iLK" secondAttribute="top" id="ib8-pc-zaL"/>
                             <constraint firstItem="Ufd-8w-eyd" firstAttribute="leading" secondItem="uEJ-mP-iLK" secondAttribute="leading" id="jMA-oz-rk7"/>
                             <constraint firstItem="Ufd-8w-eyd" firstAttribute="top" secondItem="uEJ-mP-iLK" secondAttribute="top" id="jux-sc-bGd"/>
+                            <constraint firstItem="Qy3-70-d3m" firstAttribute="top" secondItem="Ufd-8w-eyd" secondAttribute="bottom" id="oWK-vp-smg"/>
+                            <constraint firstAttribute="trailing" secondItem="Ufd-8w-eyd" secondAttribute="trailing" id="tFh-my-tjn"/>
+                            <constraint firstAttribute="trailing" secondItem="Ufd-8w-eyd" secondAttribute="trailing" id="uh0-jD-d3b"/>
                             <constraint firstAttribute="trailing" secondItem="Ufd-8w-eyd" secondAttribute="trailing" id="xaa-0A-JRL"/>
+                            <constraint firstItem="Qy3-70-d3m" firstAttribute="top" secondItem="Ufd-8w-eyd" secondAttribute="bottom" id="yBk-qK-Sg0"/>
                         </constraints>
                     </view>
                     <connections>
@@ -863,7 +915,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TwH-zF-Bki" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-62.811127379209367" y="783.3984375"/>
+            <point key="canvasLocation" x="-63.281249999999993" y="782.8125"/>
         </scene>
         <!--Check Pass Code-->
         <scene sceneID="oJ6-3j-GSr">
@@ -874,11 +926,11 @@
                         <viewControllerLayoutGuide type="bottom" id="RIS-f9-z1h"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OZK-tP-Hn1">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="code" translatesAutoresizingMaskIntoConstraints="NO" id="vpJ-r3-MbH">
-                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sz-Lz-FKI" customClass="BounceButton" customModule="بســمة" customModuleProvider="target">
                                 <rect key="frame" x="466" y="365" width="93" height="51"/>
@@ -920,8 +972,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vpJ-r3-MbH" firstAttribute="leading" secondItem="OZK-tP-Hn1" secondAttribute="leading" id="ATq-cK-tKf"/>
+                            <constraint firstItem="RIS-f9-z1h" firstAttribute="top" secondItem="vpJ-r3-MbH" secondAttribute="bottom" id="TjK-ou-SNO"/>
                             <constraint firstAttribute="trailing" secondItem="vpJ-r3-MbH" secondAttribute="trailing" id="TmG-SD-09T"/>
+                            <constraint firstAttribute="trailing" secondItem="vpJ-r3-MbH" secondAttribute="trailing" id="aJq-o0-jJJ"/>
+                            <constraint firstItem="vpJ-r3-MbH" firstAttribute="top" secondItem="OZK-tP-Hn1" secondAttribute="top" id="enM-eW-tEJ"/>
                             <constraint firstItem="vpJ-r3-MbH" firstAttribute="top" secondItem="OZK-tP-Hn1" secondAttribute="top" id="gpf-Au-rAA"/>
+                            <constraint firstItem="vpJ-r3-MbH" firstAttribute="leading" secondItem="OZK-tP-Hn1" secondAttribute="leading" id="mJb-JO-Zwt"/>
                             <constraint firstItem="RIS-f9-z1h" firstAttribute="top" secondItem="vpJ-r3-MbH" secondAttribute="bottom" id="qJ0-24-UdO"/>
                         </constraints>
                     </view>
@@ -954,11 +1010,11 @@
         <image name="unchecked" width="501" height="501"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="ln8-Kd-4rJ"/>
+        <segue reference="PS5-Ve-SeQ"/>
+        <segue reference="3Dg-TH-dFz"/>
+        <segue reference="YYj-Ua-gJ5"/>
         <segue reference="eMH-j7-aC9"/>
         <segue reference="xYX-rW-1qe"/>
-        <segue reference="AP2-ex-t4g"/>
-        <segue reference="Md3-NS-2jn"/>
-        <segue reference="YYj-Ua-gJ5"/>
-        <segue reference="oYh-9V-skj"/>
     </inferredMetricsTieBreakers>
 </document>
